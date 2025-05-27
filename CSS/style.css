@@ -157,3 +157,41 @@
 
      
  }
+
+ .hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.header-menu ul {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .header-menu ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--color--access);
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  .header-menu ul.active {
+    display: flex;
+  }
+
+  .header-menu a {
+    color: white;
+  }
+}
