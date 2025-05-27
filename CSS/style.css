@@ -1,0 +1,17 @@
+:root{
+--color--access:#3c77a9;
+--font--dani:;
+
+}
+
+html{
+    
+}
+
+.header-page{
+    background-color:var(--color--access);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
