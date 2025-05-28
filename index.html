@@ -15,9 +15,9 @@
     <section class="container">
         <header class="header-page">
             <h1>Daniela Masseiras</h1>
-            <div class="hamburger">
-                ☰
-            </div>
+
+            <div class="hamburger">☰</div>
+
             <nav class="header-menu">
                 <ul>
                     <li><a href="#tela1">Classe de Barras</a></li>
@@ -127,7 +127,22 @@
         <p>&copy; 2025 <span>Daniela Masseiras</span>. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const menu = document.querySelector('.header-menu ul');
+
+            hamburger.addEventListener('click', function () {
+                menu.classList.toggle('active');
+
+                if (menu.classList.contains('active')) {
+                    hamburger.textContent = '✖';
+                } else {
+                    hamburger.textContent = '☰';
+                }
+            });
+        });
+    </script>
 
 </body>
 

@@ -162,11 +162,7 @@
   display: none;
   font-size: 2rem;
   cursor: pointer;
-}
-
-.header-menu ul {
-  display: flex;
-  gap: 20px;
+  z-index: 1000;
 }
 
 @media (max-width: 768px) {
