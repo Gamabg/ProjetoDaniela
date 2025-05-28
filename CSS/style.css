@@ -149,6 +149,7 @@ body {
   display: inline-block;
   transition: 0.5s;
   margin-top: 15px;
+  text-decoration: none;
 }
 
 .btn:hover {
