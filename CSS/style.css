@@ -136,21 +136,48 @@ h3 {
   color: var(--color--gray);
 }
 
+/* Existing styles */
 .cardeimage {
-display: flex;
-gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .cards {
-display: flex;
-flex-direction: column;
-gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .card img {
-height: 300px;
-width: 300px;
+  height: 300px;
+  width: 300px;
+}
 
+/* --- Media Queries for Responsiveness --- */
+
+/* For screens smaller than 768px (common tablet breakpoint, adjust as needed) */
+@media (max-width: 768px) {
+  .card img {
+    height: 200px; /* Adjust image height for smaller screens */
+    width: 200px;  /* Adjust image width for smaller screens */
+  }
+}
+
+/* For screens smaller than 480px (common phone breakpoint, adjust as needed) */
+@media (max-width: 480px) {
+  .cardeimage {
+    flex-direction: column; /* Stack images vertically on very small screens */
+    align-items: center;    /* Center images when stacked */
+  }
+
+  .card img {
+    height: 150px; /* Further reduce image size for phones */
+    width: 150px;  /* Further reduce image size for phones */
+  }
+
+  .cards {
+    gap: 10px; /* Reduce gap between card rows on mobile */
+  }
 }
 
 /* Estilos para o container do iframe */
