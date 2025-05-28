@@ -1,3 +1,6 @@
+/* ============================== */
+/* ======== VARIÁVEIS ========== */
+/* ============================== */
 :root {
   --color--access: #3c77a9;
   --color--pink: #ff6f91;
@@ -7,6 +10,9 @@
   --color--accent: #ffd166;
 }
 
+/* ============================== */
+/* ======== RESET ============== */
+/* ============================== */
 * {
   box-sizing: border-box;
 }
@@ -38,6 +44,9 @@ a:hover {
   color: var(--color--access);
 }
 
+/* ============================== */
+/* ======== CONTAINER ========= */
+/* ============================== */
 .container {
   width: 100%;
   padding: 50px 20px;
@@ -45,6 +54,9 @@ a:hover {
   margin: 0 auto;
 }
 
+/* ============================== */
+/* ======== HEADER ============= */
+/* ============================== */
 .header-page {
   display: flex;
   justify-content: space-between;
@@ -57,6 +69,40 @@ a:hover {
   font-size: 2rem;
 }
 
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* ============================== */
+/* ======== HERO SECTION ======= */
+/* ============================== */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color--access), var(--color--pink));
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 1rem;
+}
+
+.hero h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.hero span {
+  color: var(--color--accent);
+}
+
+/* ============================== */
+/* ======== BOTÕES ============= */
+/* ============================== */
 .btn {
   background-color: var(--color--access);
   color: white;
@@ -73,34 +119,18 @@ a:hover {
   border: 2px solid var(--color--access);
 }
 
-.hero {
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* gap: 10px; */
-  background: linear-gradient(135deg, var(--color--access), var(--color--pink));
-  color: white;
-  text-align: center;
-  padding: 50px 20px;
-  border-radius: 1rem;
-}
-
-.hero h2 {
-  font-size: clamp(2rem, 5vw, 4rem);
-}
-
-.hero span {
-  color: var(--color--accent);
-}
-
+/* ============================== */
+/* ======== TÍTULOS ============ */
+/* ============================== */
 h3 {
   color: var(--color--access);
   font-size: 2rem;
   margin-bottom: 20px;
 }
 
+/* ============================== */
+/* ======== CARDS ============== */
+/* ============================== */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -117,7 +147,6 @@ h3 {
   align-items: center;
   text-align: center;
   transition: transform 0.3s ease;
-  text-wrap: wrap;
 }
 
 .card:hover {
@@ -125,8 +154,8 @@ h3 {
 }
 
 .card img {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   border-radius: 20%;
   margin-bottom: 15px;
@@ -134,25 +163,23 @@ h3 {
 
 .card p {
   color: var(--color--gray);
+  text-align: justify; 
+  max-width: 600px; 
+  margin: 0 auto; 
+  padding: 10px;
 }
 
-.cardeimage {
-display: flex;
-gap: 10px;
+/* ============================== */
+/* ====== IMAGENS MULTIPLAS ==== */
+/* ============================== */
+.card-images {
+  display: flex;
+  flex-direction: column;
 }
 
-.cardeimage {
-display: flex;
-flex-direction: column;
-gap: 20px;
-}
-
-.cardeimage img {
-height: 300px;
-width: 300px;
-
-}
-
+/* ============================== */
+/* ======== FOOTER ============= */
+/* ============================== */
 footer {
   text-align: center;
   padding: 50px 20px;
@@ -161,26 +188,15 @@ footer {
   font-weight: 600;
   margin-top: 50px;
   border-radius: 1rem 1rem 0 0;
-
-  & span {
-    color: var(--color--black);
-  }
 }
 
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #111;
-  color: var(--color--light);
+footer span {
+  color: var(--color--black);
 }
 
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 1000;
-}
-
+/* ============================== */
+/* ======== MEDIA QUERIES ====== */
+/* ============================== */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
