@@ -136,28 +136,6 @@ h3 {
   color: var(--color--gray);
 }
 
-HTML
-
-&lt;section class="container" id="tela2">
-&lt;h3>Seção de Barras&lt;/h3>
-&lt;div class="cards">
-&lt;div class="card">
-&lt;div class="cardeimage">
-&lt;img src="/imgs/image1.png" alt="Seção de Barras" />
-&lt;img src="/imgs/image2.png" alt="Seção de Barras" />
-&lt;/div>
-&lt;div class="cardeimage">
-&lt;img src="/imgs/image3.png" alt="Seção de Barras" />
-&lt;img src="/imgs/image4.png" alt="Seção de Barras" />
-&lt;/div>
-&lt;div class="cardeimage">
-&lt;img src="/imgs/image5.png" alt="Seção de Barras" />
-&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/section>
-
-CSS
 .cardeimage {
 display: flex;
 gap: 10px;
@@ -173,6 +151,49 @@ gap: 20px;
 height: 300px;
 width: 300px;
 
+}
+
+/* Estilos para o container do iframe */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; /* Ajuste este valor para controlar a proporção (ex: 75% para 4:3, 56.25% para 16:9) */
+    height: 0;
+    overflow: hidden;
+    margin: 0 auto; /* Centraliza o container */
+}
+
+/* Estilos para o iframe dentro do container */
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; /* Remove a borda padrão do iframe */
+}
+
+/* Media query para telas menores (celulares) */
+@media (max-width: 768px) { /* Você pode ajustar este breakpoint */
+    .iframe-container {
+        padding-bottom: 120%; /* Aumenta a altura proporcional para celulares, se o PDF for vertical */
+    }
+}
+
+/* Estilos gerais para o container e card (se já não existirem) */
+.container {
+    padding: 20px; /* Adicione algum padding para as bordas da tela */
+}
+
+.cards {
+    display: flex;
+    justify-content: center; /* Centraliza o card */
+    align-items: center;
+}
+
+.card {
+    width: 100%; /* Garante que o card ocupe a largura total disponível */
+    max-width: 800px; /* Define uma largura máxima para o card em telas maiores */
 }
 
 footer {
